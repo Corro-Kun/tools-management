@@ -1,0 +1,38 @@
+<body>
+  <div class="overlay"></div>
+  <slot />
+</body>
+
+<script is:inline>
+  document.addEventListener("mousemove", (e) => {
+    const overlay = document.querySelector(".overlay");
+    const x = e.clientX;
+    const y = e.clientY;
+
+    overlay.style.background = `radial-gradient(circle at ${x}px ${y}px, var(--overlay-color), transparent)`;
+  });
+</script>
+
+<style>
+  body {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-color);
+    overflow: hidden;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(
+      circle at 50% 50%,
+      var(--overlay-color),
+      transparent
+    );
+    transition: background 0.3s ease;
+    z-index: -1;
+  }
+</style>
