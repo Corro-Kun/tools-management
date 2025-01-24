@@ -1,0 +1,68 @@
+---
+import Home from "@/shared/icons/Home.svelte";
+import Lend from "@/shared/icons/Lend.svelte";
+import Tools from "@/shared/icons/Tools.svelte";
+import User from "@/shared/icons/User.svelte";
+---
+
+<div class="main">
+  <a class="element" href="/home">
+    <div>
+      <Home />
+    </div>
+    <p>Inicio</p>
+  </a>
+  <a class="element" href="/lend">
+    <div>
+      <Lend />
+    </div>
+    <p>Prestar</p>
+  </a>
+  <a class="element" href="/tools">
+    <div>
+      <Tools />
+    </div>
+    <p>Equipos</p>
+  </a>
+  <a class="element" href="/user">
+    <div>
+      <User />
+    </div>
+    <p>Usuarios</p>
+  </a>
+</div>
+
+<style>
+  .main {
+    display: flex;
+    height: 100vh;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .element div {
+    padding-inline: 5px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    border-radius: var(--radius);
+    transition: 0.2s;
+  }
+  .element:hover div {
+    background-color: var(--glow-color);
+  }
+  p {
+    margin-top: 5px;
+    font-size: 0.8rem;
+  }
+</style>
