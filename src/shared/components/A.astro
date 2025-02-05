@@ -1,15 +1,19 @@
-<script lang="ts">
-  let { type = "button", onclick = () => {} } = $$props;
-</script>
+---
+interface Props {
+  href: string;
+}
 
-<button {type} {onclick}>
-  <slot></slot>
-</button>
+const { href }: Props = Astro.props;
+---
+
+<a href={href}>
+  <slot />
+</a>
 
 <style>
-  button {
+  a {
     width: 100%;
-    padding: 15px;
+    padding: 12px 15px;
     background: none;
     color: var(--text-color);
     cursor: pointer;
@@ -20,8 +24,9 @@
     font-size: 1em;
     font-weight: 500;
     outline: none;
+    text-decoration: none;
   }
-  button:hover {
+  a:hover {
     box-shadow: inset 0 0 20px var(--glow-color-secondary);
   }
 </style>

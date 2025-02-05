@@ -9,4 +9,8 @@ export const paths = {
     getHref: () => "/home",
     push: () => navigate("/home"),
   },
+  user: {
+    getHref: () => "/user",
+    push: () => navigate("/user"),
+  },
 };

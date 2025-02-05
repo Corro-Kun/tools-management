@@ -24,9 +24,9 @@
 </audio>
 <button onclick={togglePlay} class={isPlaying ? "active" : ""}>
   {#if isPlaying}
-    <PlayerStop />
+    <PlayerStop height={50} width={50} />
   {:else}
-    <PlayerPlay />
+    <PlayerPlay height={50} width={50} />
   {/if}
 </button>
 

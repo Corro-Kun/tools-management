@@ -1,0 +1,41 @@
+---
+import Cards from "@/components/user/SelectionUser.svelte";
+import Layout from "@/layouts/LayoutHome.astro";
+import A from "@/shared/components/A.astro";
+---
+
+<Layout>
+  <div class="main">
+    <div class="bar">
+      <div class="button">
+        <A href="/home">Crear</A>
+      </div>
+    </div>
+    <div class="body">
+      <Cards client:load />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+  .bar {
+    display: flex;
+    justify-content: right;
+  }
+  .button {
+    margin: 10px;
+  }
+  .body {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
