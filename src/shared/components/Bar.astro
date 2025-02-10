@@ -14,18 +14,18 @@ import User from "@/shared/icons/User.svelte";
     </div>
     <p>Inicio</p>
   </a>
-  <a class="element" href="/lend">
+  <a class="element" href={paths.lend.getHref()}>
     <div>
       <Lend />
     </div>
     <p>Prestar</p>
   </a>
-  <a class="element" href="/return">
+  <a class="element" href={paths.return.getHref()}>
     <div>
       <Return />
     </div>
     <p>Devolver</p>
-    <a class="element" href="/tools">
+    <a class="element" href={paths.tool.getHref()}>
       <div>
         <Tools />
       </div>

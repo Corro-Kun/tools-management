@@ -9,6 +9,18 @@ export const paths = {
     getHref: () => "/home",
     push: () => navigate("/home"),
   },
+  lend: {
+    getHref: () => "/lend",
+    push: () => navigate("/lend"),
+  },
+  return: {
+    getHref: () => "/return",
+    push: () => navigate("/return"),
+  },
+  tool: {
+    getHref: () => "/tool",
+    push: () => navigate("/tool"),
+  },
   user: {
     getHref: () => "/user",
     push: () => navigate("/user"),
