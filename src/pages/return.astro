@@ -1,5 +1,19 @@
 ---
 import Layout from "@/layouts/LayoutHome.astro";
+import SearchForTool from "@/components/return/SearchForTool.svelte";
 ---
 
-<Layout />
+<Layout>
+    <div class="filter" >
+        <SearchForTool />
+    </div>
+</Layout>
+
+<style>
+    .filter {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
