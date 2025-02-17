@@ -1,19 +1,23 @@
 ---
-import Layout from "@/layouts/LayoutHome.astro";
 import SearchForTool from "@/components/return/SearchForTool.svelte";
+import Layout from "@/layouts/LayoutHome.astro";
+import CardTools from "@/shared/components/CardTools.svelte";
 ---
 
 <Layout>
-    <div class="filter" >
-        <SearchForTool />
-    </div>
+  <div class="filter">
+    <SearchForTool />
+  </div>
+  <div>
+    <CardTools />
+  </div>
 </Layout>
 
 <style>
-    .filter {
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .filter {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
